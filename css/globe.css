@@ -1,0 +1,76 @@
+/* ============================================================
+   GLOBE.CSS — Estilos exclusivos do Slide 15 (Globo Interativo)
+   Não afeta nenhum outro slide.
+   ============================================================ */
+
+/* Override do slide-end SOMENTE para o slide 15 */
+#slide-15 {
+  background: radial-gradient(ellipse at 50% 50%, #000d1a 0%, #000305 100%) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Canvas do Three.js — cobre todo o slide */
+#earth-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+#earth-canvas:active {
+  cursor: grabbing;
+}
+
+/* Container de texto que fica sobre o globo */
+.end-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none; /* deixa o canvas receber cliques do mouse para interação */
+}
+
+/* Placa semi-transparente atrás do texto para legibilidade */
+.end-overlay-card {
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 50%,
+    rgba(3, 12, 30, 0.82) 0%,
+    rgba(3, 12, 30, 0.55) 55%,
+    transparent 100%
+  );
+  padding: 2.5rem 4rem 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  pointer-events: all; /* permite clicar nos botões */
+}
+
+/* Hint de interação no canto inferior */
+.globe-hint {
+  position: absolute;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-size: 11px;
+  color: rgba(52, 211, 153, 0.5);
+  font-family: var(--font-body, sans-serif);
+  letter-spacing: 0.08em;
+  pointer-events: none;
+  animation: globeHintFade 3s ease 2s forwards;
+}
+
+@keyframes globeHintFade {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}

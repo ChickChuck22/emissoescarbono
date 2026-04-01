@@ -11,6 +11,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/slides.css" />
+  <link rel="stylesheet" href="css/globe.css" />
 </head>
 
 <body>
@@ -837,26 +838,33 @@
     </div>
 
     <!-- ════════════════════════════════════════════════════
-         SLIDE 15 — ENCERRAMENTO
+         SLIDE 15 — ENCERRAMENTO (Globo Interativo)
          ════════════════════════════════════════════════════ -->
     <div class="slide slide-end" id="slide-15">
-      <span class="end-logo">🌍</span>
-      <h2 class="end-title">Obrigado!</h2>
-      <p class="end-sub">GRUPO 5 — Emissões, Carbono e Práticas ESG</p>
 
-      <div class="end-team">
-        <span class="end-member">👤 Carlos D.</span>
-        <span class="end-member">👤 Italo</span>
+      <!-- Canvas Three.js — preenche todo o slide -->
+      <canvas id="earth-canvas"></canvas>
+
+      <!-- Texto sobreposto ao globo -->
+      <div class="end-overlay">
+        <div class="end-overlay-card">
+          <h2 class="end-title">Obrigado!</h2>
+          <p class="end-sub">GRUPO 5 — Emissões, Carbono e Práticas ESG</p>
+
+          <div class="end-team">
+            <span class="end-member">👤 Carlos D.</span>
+            <span class="end-member">👤 Italo</span>
+          </div>
+
+          <a href="index.html" class="btn btn-outline" id="btn-estudos-end" style="font-size:var(--text-base);">
+            📚 Ver Material Completo
+          </a>
+        </div>
       </div>
 
-      <div style="display:flex; flex-direction:column; align-items:center; gap:var(--space-4);">
-        <a href="index.html" class="btn btn-outline" id="btn-estudos-end" style="font-size:var(--text-base);">
-          📚 Ver Material Completo
-        </a>
-        <p style="font-size:var(--text-xs); color:var(--slate-600); font-family:var(--font-body);">
-          Use as setas ← → ou clique nos pontos para navegar entre os slides
-        </p>
-      </div>
+      <!-- Dica de interação -->
+      <p class="globe-hint">🌍 Arraste para girar o planeta</p>
+
     </div>
 
     <!-- ─── Controls ──────────────────────────────────────── -->
@@ -876,6 +884,10 @@
 
   <!-- JS -->
   <script src="js/slides.js"></script>
+
+  <!-- Three.js + Globo interativo (Slide 15) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+  <script src="js/globe.js"></script>
 </body>
 
 </html>
