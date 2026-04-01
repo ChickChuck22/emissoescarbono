@@ -173,12 +173,15 @@ class SlideEngine {
     // Mouse wheel
     let wheelThrottle = false;
     window.addEventListener('wheel', (e) => {
+      // Ignora se estiver interagindo com o globo no último slide
+      if (this.currentIndex === this.totalSlides - 1 && e.target.id === 'earth-canvas') return;
+
       if (wheelThrottle) return;
       wheelThrottle = true;
       if (e.deltaY > 30) this.next();
       else if (e.deltaY < -30) this.prev();
       setTimeout(() => { wheelThrottle = false; }, 800);
-    }, { passive: true });
+    }, { passive: false }); // Mudado para false para permitir bloqueio selectivo se necessário
   }
 
   initSwipe() {
@@ -191,6 +194,9 @@ class SlideEngine {
     }, { passive: true });
 
     document.addEventListener('touchend', (e) => {
+      // Ignora swipe se vier do globo interativo
+      if (this.currentIndex === this.totalSlides - 1 && e.target.id === 'earth-canvas') return;
+
       const dx = e.changedTouches[0].clientX - startX;
       const dy = e.changedTouches[0].clientY - startY;
       if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
