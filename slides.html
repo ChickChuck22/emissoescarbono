@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRUPO 5 ESG — Apresentação de Slides</title>
+  <meta name="description"
+    content="Apresentação interativa sobre Emissões, Carbono e Práticas ESG — GRUPO 5. Navegue com as setas do teclado." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/slides.css" />
+</head>
+
+<body>
+
+  <!-- ─── Slides App Shell ───────────────────────────────── -->
+  <div class="slides-app" id="slides-app">
+
+    <!-- Progress Bar -->
+    <div class="slide-progress-bar" id="progress-bar" style="width:7.14%"></div>
+
+    <!-- Back Button -->
+    <a href="index.html" class="slide-back-btn" id="btn-back">
+      ← Estudos
+    </a>
+
+    <!-- Keyboard Hint -->
+    <div class="keyboard-hint" id="keyboard-hint">
+      <span class="key">←</span>
+      <span class="key">→</span>
+      Navegue com as setas
+    </div>
+
+    <!-- Fullscreen -->
+    <button class="slide-fullscreen" id="slide-fullscreen" title="Tela cheia (F)">⛶</button>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 1 — CAPA
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-cover active" id="slide-1">
+      <div class="cover-bg-grid"></div>
+      <div class="cover-orb cover-orb-1"></div>
+      <div class="cover-orb cover-orb-2"></div>
+
+      <div class="cover-content">
+        <div class="cover-grupo">
+          <span>🌍</span> GRUPO 5
+        </div>
+
+        <h1 class="cover-title">
+          <span class="line-1">Emissões, Carbono</span>
+          <span class="line-2">e Práticas ESG</span>
+        </h1>
+
+        <p class="cover-subtitle">
+          Uma análise completa sobre mercado de carbono, compensação de emissões<br>e sustentabilidade corporativa no
+          Brasil e no mundo.
+        </p>
+
+        <div class="cover-themes">
+          <span class="badge badge-green">🌱 Compensação &amp; Mercado de Carbono</span>
+          <span class="badge badge-sky">📊 Cálculo e Regulamentação</span>
+          <span class="badge badge-amber">🔍 Análise de Cenários</span>
+          <span class="badge badge-lime">🏢 Exemplos Práticos ESG</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 2 — O QUE SÃO EMISSÕES DE GEE?
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-gee" id="slide-2">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 1</div>
+        <h2 class="slide-title">O que são <span class="highlight">Gases de Efeito Estufa</span>?</h2>
+        <p
+          style="text-align:center; color:var(--slate-400); font-family:var(--font-body); font-size:var(--text-sm); margin-bottom:var(--space-4); max-width:700px; margin-inline:auto;">
+          São gases que funcionam como um <strong style="color:var(--emerald-300);">"cobertor" ao redor da
+            Terra</strong> — retêm o calor do sol na atmosfera e aquecem o planeta. Quanto mais desses gases no ar, mais
+          intensa a mudança climática.
+        </p>
+
+        <div class="gee-gases-row">
+          <div class="gee-gas">
+            <span class="gee-gas-formula">CO₂</span>
+            <span class="gee-gas-name">Dióxido de Carbono · Queima de petróleo, carvão e gás</span>
+          </div>
+          <div class="gee-gas">
+            <span class="gee-gas-formula">CH₄</span>
+            <span class="gee-gas-name">Metano · 28× mais poluente · Gado e aterros</span>
+          </div>
+          <div class="gee-gas">
+            <span class="gee-gas-formula">N₂O</span>
+            <span class="gee-gas-name">Óxido Nitroso · 265× mais poluente · Fertilizantes</span>
+          </div>
+          <div class="gee-gas">
+            <span class="gee-gas-formula">HFC</span>
+            <span class="gee-gas-name">Gás de ar-condicionado, geladeiras e freezers</span>
+          </div>
+          <div class="gee-gas">
+            <span class="gee-gas-formula">PFC</span>
+            <span class="gee-gas-name">Produção de alumínio e chips eletrônicos</span>
+          </div>
+          <div class="gee-gas">
+            <span class="gee-gas-formula">SF₆</span>
+            <span class="gee-gas-name">Equipamentos elétricos · 23.500× mais poluente</span>
+          </div>
+        </div>
+
+        <div class="gee-activities">
+          <div class="gee-activity"><span class="icon">🏭</span> Fábricas e indústrias (queima de combustível)</div>
+          <div class="gee-activity"><span class="icon">🚛</span> Caminhões, aviões e navios a diesel</div>
+          <div class="gee-activity"><span class="icon">⚡</span> Energia elétrica gerada em usinas poluentes</div>
+          <div class="gee-activity"><span class="icon">🐄</span> Pecuária e fertilizantes no campo</div>
+          <div class="gee-activity"><span class="icon">🗑️</span> Lixo em aterros liberando gás metano</div>
+          <div class="gee-activity"><span class="icon">🏗️</span> Construção civil (cimento e aço)</div>
+        </div>
+
+        <p
+          style="margin-top:var(--space-5); font-size:var(--text-xs); color:var(--slate-500); font-family:var(--font-body);">
+          📖 Fonte: IPCC AR6 (2023) · GHG Protocol Corporate Standard
+        </p>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 3 — OS 3 ESCOPOS
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-escopos" id="slide-3">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 2</div>
+        <h2 class="slide-title">Como Calcular? As <span class="highlight">3 Categorias</span> de Emissões</h2>
+        <p
+          style="text-align:center; color:var(--slate-400); font-family:var(--font-body); font-size:var(--text-sm); margin-bottom:var(--space-4); max-width:680px; margin-inline:auto;">
+          O padrão internacional <strong style="color:var(--emerald-300);">GHG Protocol</strong> divide as emissões em 3
+          categorias chamadas "Escopos" — do mais direto ao mais indireto.
+        </p>
+
+        <div class="escopos-visual">
+          <div class="escopo-slide-card s1">
+            <div class="escopo-slide-badge">1</div>
+            <h3>Escopo 1 — Diretas</h3>
+            <p class="subtitle">Poluição que sai das <strong>próprias máquinas e veículos</strong> da empresa</p>
+            <ul class="escopo-examples-list">
+              <li>Caldeiras e fornos da fábrica</li>
+              <li>Frota de carros e caminhões da empresa</li>
+              <li>Vazamentos de gás do ar-condicionado</li>
+              <li>Reações químicas nos processos internos</li>
+            </ul>
+          </div>
+
+          <div class="escopo-slide-card s2">
+            <div class="escopo-slide-badge">2</div>
+            <h3>Escopo 2 — Energia Comprada</h3>
+            <p class="subtitle">Poluição gerada para produzir a <strong>energia elétrica que a empresa usa</strong></p>
+            <ul class="escopo-examples-list">
+              <li>Conta de luz da fábrica e escritório</li>
+              <li>Ar-condicionado e iluminação</li>
+              <li>Energia de usina a carvão = empresa é co-responsável</li>
+            </ul>
+          </div>
+
+          <div class="escopo-slide-card s3">
+            <div class="escopo-slide-badge">3</div>
+            <h3>Escopo 3 — Toda a Cadeia</h3>
+            <p class="subtitle">Tudo que acontece <strong>antes e depois</strong> da empresa</p>
+            <ul class="escopo-examples-list">
+              <li>Fornecedores: quem faz as peças e matérias-primas</li>
+              <li>Transporte dos produtos até o cliente</li>
+              <li>Viagens de avião dos funcionários</li>
+              <li>Uso e descarte dos produtos pelo consumidor</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="formula-visual" style="margin-top:var(--space-6); padding:var(--space-5);">
+          <div class="formula-eq">
+            <span class="formula-token ft-main">Emissão em toneladas</span>
+            <span class="formula-token ft-op">=</span>
+            <span class="formula-token ft-data">Quanto foi consumido</span>
+            <span class="formula-token ft-op">×</span>
+            <span class="formula-token ft-factor">Quanto polui por unidade</span>
+            <span class="formula-token ft-op">=</span>
+            <span class="formula-token ft-result">⬤ tCO₂e</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 4 — REGULAMENTAÇÃO SBCE
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-formula" id="slide-4">
+      <div class="slide-inner">
+        <div class="slide-label">Regulamentação Brasileira</div>
+        <h2 class="slide-title">Lei 15.042/2024 — O Mercado<br><span class="highlight">de Carbono no Brasil</span></h2>
+
+        <div class="slide-two-col">
+          <div>
+            <div class="regul-card" style="margin-bottom:var(--space-5);">
+              <div class="regul-title">⚖️ O que é o SBCE (Sistema Brasileiro de Comércio de Emissões)?</div>
+              <p
+                style="font-size:var(--text-sm); color:var(--slate-400); line-height:1.6; margin-bottom:var(--space-5); font-family:var(--font-body);">
+                Em <strong style="color:var(--emerald-300);">dezembro de 2024</strong>, o Brasil aprovou uma lei que
+                cria o mercado oficial de carbono. Agora empresas grandes <strong style="color:var(--emerald-300);">são
+                  obrigadas</strong> a controlar e reduzir suas emissões — ou pagar por isso.
+              </p>
+              <div class="regul-rules">
+                <div class="regul-rule">
+                  <span class="regul-threshold">&gt; 10.000 ton/ano</span>
+                  <span class="regul-action">→ Empresa deve medir e declarar toda a poluição que gera</span>
+                </div>
+                <div class="regul-rule">
+                  <span class="regul-threshold" style="color:var(--amber-400);">&gt; 25.000 ton/ano</span>
+                  <span class="regul-action">→ Precisa cumprir metas de redução ou comprar créditos no mercado</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="background:rgba(30,41,59,0.5); border-radius:var(--radius-md); padding:var(--space-5); border:1px solid rgba(52,211,153,0.1);">
+              <h4 style="color:var(--emerald-400); margin-bottom:var(--space-3); font-size:var(--text-sm);">Os 3
+                instrumentos do mercado</h4>
+              <div style="display:flex; flex-direction:column; gap:var(--space-2);">
+                <div class="gee-activity"><span class="icon">📋</span> <strong>CBEs</strong> — "Permissões de poluição"
+                  que as empresas recebem ou compram</div>
+                <div class="gee-activity"><span class="icon">✅</span> <strong>CRVEs</strong> — Certificados que provam
+                  que a empresa realmente reduziu emissões</div>
+                <div class="gee-activity"><span class="icon">🌳</span> <strong>REDD+</strong> — Projetos de floresta
+                  preservada que geram créditos de carbono</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div
+              style="background:rgba(30,41,59,0.5); border-radius:var(--radius-xl); padding:var(--space-7); border:1px solid rgba(52,211,153,0.15); height:100%;">
+              <h4 style="color:var(--color-text); font-size:var(--text-lg); margin-bottom:var(--space-5);">Cronograma de
+                Implementação</h4>
+              <div style="display:flex; flex-direction:column; gap:var(--space-4);">
+                <div style="display:flex; align-items:flex-start; gap:var(--space-3);">
+                  <span
+                    style="font-family:var(--font-mono); font-size:var(--text-sm); color:var(--emerald-400); min-width:50px; font-weight:700;">2024</span>
+                  <span style="font-size:var(--text-sm); color:var(--slate-300); font-family:var(--font-body);">Sanção
+                    da Lei 15.042 · Criação do SBCE</span>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:var(--space-3);">
+                  <span
+                    style="font-family:var(--font-mono); font-size:var(--text-sm); color:var(--emerald-400); min-width:50px; font-weight:700;">2025</span>
+                  <span
+                    style="font-size:var(--text-sm); color:var(--slate-300); font-family:var(--font-body);">Definição de
+                    normas técnicas · MRV · Órgão gestor</span>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:var(--space-3);">
+                  <span
+                    style="font-family:var(--font-mono); font-size:var(--text-sm); color:var(--amber-400); min-width:50px; font-weight:700;">2026+</span>
+                  <span style="font-size:var(--text-sm); color:var(--slate-300); font-family:var(--font-body);">Operação
+                    plena · Negociação de cotas no mercado</span>
+                </div>
+              </div>
+              <div
+                style="margin-top:var(--space-6); padding:var(--space-4); background:rgba(6,78,59,0.2); border-radius:var(--radius-md); border:1px solid rgba(16,185,129,0.2);">
+                <p
+                  style="font-size:var(--text-xs); color:var(--slate-400); font-family:var(--font-body); line-height:1.6;">
+                  📖 Fonte: Lei nº 15.042/2024 · gov.br · Senado Federal · CEBDS
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 5 — MERCADO DE CARBONO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-market" id="slide-5">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 3</div>
+        <h2 class="slide-title">O <span class="highlight">Mercado de Carbono</span><br>e como ele funciona</h2>
+
+        <div class="market-types">
+          <div class="market-type-card reg-card">
+            <span class="icon">⚖️</span>
+            <h3>Mercado Regulado</h3>
+            <p>O <strong>governo define um limite</strong> de poluição. Quem polui menos pode vender sua "folga" para
+              quem poluiu demais. É o modelo de <strong>"limite e comércio"</strong>.</p>
+          </div>
+          <div class="market-type-card vol-card">
+            <span class="icon">🤝</span>
+            <h3>Mercado Voluntário</h3>
+            <p>Empresas compensam emissões <strong>por escolha própria</strong>, sem lei obrigando. Fazem isso para
+              ajudar o planeta, atrair investidores ou melhorar sua imagem.</p>
+          </div>
+        </div>
+
+        <div class="credit-info">
+          <span class="credit-icon">🪙</span>
+          <div>
+            <h4>1 Crédito de Carbono = 1 tonelada de CO₂ que deixou de ir para o ar</h4>
+            <p>Exemplos: Preservar florestas (REDD+), captar gás de lixões para gerar energia, ou investir em usinas
+              solares e eólicas.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:var(--space-5); display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-4);">
+          <div
+            style="background:rgba(30,41,59,0.5); border-radius:var(--radius-md); padding:var(--space-4); text-align:center; border:1px solid rgba(52,211,153,0.1);">
+            <div
+              style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:900; color:var(--emerald-400);">
+              US$ 1 tri</div>
+            <div style="font-size:var(--text-xs); color:var(--slate-500); margin-top:4px;">Projeção do mercado global
+              nesta década</div>
+          </div>
+          <div
+            style="background:rgba(30,41,59,0.5); border-radius:var(--radius-md); padding:var(--space-4); text-align:center; border:1px solid rgba(52,211,153,0.1);">
+            <div
+              style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:900; color:var(--sky-400);">
+              🇨🇳 #1</div>
+            <div style="font-size:var(--text-xs); color:var(--slate-500); margin-top:4px;">China: maior mercado de
+              carbono do mundo</div>
+          </div>
+          <div
+            style="background:rgba(30,41,59,0.5); border-radius:var(--radius-md); padding:var(--space-4); text-align:center; border:1px solid rgba(52,211,153,0.1);">
+            <div
+              style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:900; color:var(--amber-400);">
+              33%</div>
+            <div style="font-size:var(--text-xs); color:var(--slate-500); margin-top:4px;">Brasil: potencial da demanda
+              global no Art. 6</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 6 — COMPENSAÇÃO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-comp" id="slide-6">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 4</div>
+        <h2 class="slide-title">O que é <span class="highlight">Compensação</span><br>de Carbono?</h2>
+
+        <div class="comp-flow">
+          <div class="comp-step">
+            <span class="comp-step-icon">📊</span>
+            <h4>1. Medir</h4>
+            <p>Saber exatamente quanto a empresa polui em cada categoria</p>
+          </div>
+          <div class="comp-arrow">→</div>
+          <div class="comp-step">
+            <span class="comp-step-icon">⬇️</span>
+            <h4>2. Reduzir</h4>
+            <p>Mudar processos para poluir menos no dia a dia</p>
+          </div>
+          <div class="comp-arrow">→</div>
+          <div class="comp-step">
+            <span class="comp-step-icon">🌳</span>
+            <h4>3. Compensar</h4>
+            <p>"Pagar" o restante investindo em projetos ambientais certificados</p>
+          </div>
+          <div class="comp-arrow">→</div>
+          <div class="comp-step">
+            <span class="comp-step-icon">🏆</span>
+            <h4>4. Mostrar</h4>
+            <p>Publicar os resultados para que todos possam conferir</p>
+          </div>
+        </div>
+
+        <div class="comp-projects">
+          <div class="comp-project">
+            <span class="icon">🌳</span>
+            REDD+<br>Conservação Florestal
+          </div>
+          <div class="comp-project">
+            <span class="icon">☀️</span>
+            Energia<br>Renovável
+          </div>
+          <div class="comp-project">
+            <span class="icon">🔥</span>
+            Captura de<br>Metano (aterros)
+          </div>
+          <div class="comp-project">
+            <span class="icon">🌱</span>
+            Reflorestamento<br>de Áreas
+          </div>
+        </div>
+
+        <div
+          style="margin-top:var(--space-5); background:rgba(6,78,59,0.2); border:1px solid rgba(16,185,129,0.2); border-radius:var(--radius-lg); padding:var(--space-5); display:flex; align-items:center; gap:var(--space-4);">
+          <span style="font-size:1.5rem;">💡</span>
+          <p style="font-size:var(--text-sm); color:var(--slate-300); font-family:var(--font-body); line-height:1.6;">
+            <strong style="color:var(--emerald-400);">Importância:</strong>
+            Compensar é o <em>último recurso</em>. A empresa deve primeiro tentar reduzir o que puder. Selos
+            internacionais garantem que o crédito de carbono é real.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 7 — VANTAGENS E CRÍTICAS
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-proscons" id="slide-7">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 5</div>
+        <h2 class="slide-title"><span class="highlight">Vantagens</span> e <span
+            style="color:#FC8181;">Críticas</span><br>ao Mercado de Carbono</h2>
+
+        <div class="pc-grid">
+          <div class="pc-column pc-pros">
+            <div class="pc-title"><span>✅</span> Vantagens</div>
+            <ul class="pc-list">
+              <li>Dá prêmio em dinheiro para quem polui menos</li>
+              <li>Empresa pode escolher a forma mais barata de ajudar</li>
+              <li>Leva dinheiro para projetos ambientais em países pobres</li>
+              <li>Atrai investidores que buscam empresas responsáveis</li>
+              <li>Faz a floresta valer mais em pé do que derrubada</li>
+              <li>Cria regras claras para o futuro dos negócios</li>
+            </ul>
+          </div>
+
+          <div class="pc-column pc-cons">
+            <div class="pc-title" style="color:#FC8181;"><span>⚠️</span> Críticas</div>
+            <ul class="pc-list">
+              <li><strong>Marketing Enganoso (Greenwashing):</strong> dizer que é verde sem mudar nada</li>
+              <li>Alguns projetos de compensação podem não funcionar de verdade</li>
+              <li>Pode virar uma "licença para poluir": basta pagar para continuar limpando as mãos</li>
+              <li>Difícil de fiscalizar se o carbono sumiu mesmo</li>
+              <li>O preço sobe e desce, o que atrapalha o planejamento</li>
+              <li>Pode fazer a empresa demorar para trocar por tecnologias limpas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 8 — ALÉM DA COMPENSAÇÃO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-alem" id="slide-8">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 6</div>
+        <h2 class="slide-title">Como Reduzir Emissões<br><span class="highlight">Além da Compensação?</span></h2>
+
+        <div class="alem-grid">
+          <div class="alem-card">
+            <span class="icon">☀️</span>
+            <h4>Energia Limpa</h4>
+            <p>Usar energia do sol, vento ou de plantas (biomassa) em vez de petróleo.</p>
+          </div>
+          <div class="alem-card">
+            <span class="icon">⚡</span>
+            <h4>Gastar Menos</h4>
+            <p>Trocar máquinas velhas, usar luzes LED e evitar o desperdício de energia.</p>
+          </div>
+          <div class="alem-card">
+            <span class="icon">♻️</span>
+            <h4>Reciclar e Reusar</h4>
+            <p>Reduzir o lixo. Usar menos material novo significa poluir menos na fábrica.</p>
+          </div>
+          <div class="alem-card">
+            <span class="icon">🚗</span>
+            <h4>Mobilidade Elétrica</h4>
+            <p>Eletrificação da frota, otimização logística, modais mais limpos.</p>
+          </div>
+          <div class="alem-card">
+            <span class="icon">🤝</span>
+            <h4>Engajar Fornecedores</h4>
+            <p>Exigir relatórios ESG da cadeia de suprimentos (Escopo 3).</p>
+          </div>
+          <div class="alem-card">
+            <span class="icon">🎯</span>
+            <h4>Metas Science-Based</h4>
+            <p>SBTi — Science Based Targets Initiative. Metas alinhadas à ciência climática.</p>
+          </div>
+        </div>
+
+        <div
+          style="margin-top:var(--space-5); text-align:center; padding:var(--space-4); background:rgba(6,78,59,0.15); border-radius:var(--radius-lg); border:1px solid rgba(16,185,129,0.2);">
+          <p style="font-family:var(--font-body); font-size:var(--text-sm); color:var(--emerald-300);">
+            🎯 <strong>Net Zero até 2050</strong> — Redução máxima + compensação apenas do residual. Alinhado ao Acordo
+            de Paris.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 9 — CASE: NATURA
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-case slide-case-natura case-natura" id="slide-9">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 7 — Case 1</div>
+
+        <div class="case-layout">
+          <div class="case-left">
+            <span class="case-logo-big">🌿</span>
+            <h2 class="case-company-name">Natura &amp;Co</h2>
+            <p class="case-tagline">Grupo brasileiro de cosméticos, pioneiro em sustentabilidade na América Latina.
+              Integra o ESG como núcleo do modelo de negócios há mais de 40 anos.</p>
+
+            <div class="case-metrics-row">
+              <div class="case-metric">
+                <span class="case-metric-val">84,6%</span>
+                <span class="case-metric-lbl">Embalagens sustentáveis (2024)</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-val">100%</span>
+                <span class="case-metric-lbl">Energia renovável própria</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-val">1983</span>
+                <span class="case-metric-lbl">Início do programa de refis</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-val">11 anos</span>
+                <span class="case-metric-lbl">Liderança no Merco ESG</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-right">
+            <h3 class="case-actions-title">🌱 Principais Práticas ESG</h3>
+            <ul class="case-actions-list">
+              <li>Pioneira em refis desde 1983: o cliente compra só o conteúdo e usa o mesmo frasco, economizando
+                plástico.</li>
+              <li>Meta: até 2030, todas as embalagens devem ser fáceis de reciclar, reusar ou recarregar.</li>
+              <li>Toda a energia das suas fábricas vem de fontes limpas (sol, vento).</li>
+              <li>Paga comunidades locais para manter a floresta amazônica em pé e extrair ingredientes de forma
+                correta.</li>
+              <li>Usa créditos de carbono que são conferidos e aprovados por organizações internacionais.</li>
+              <li>Parceria com a Suzano (2025) para criar embalagens que se decompõem sozinhas na natureza.</li>
+            </ul>
+
+            <div class="case-source">
+              <span>📖</span>
+              natura.com.br · brazilbeautynews.com · Merco ESG 2024
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 10 — CASE: SUZANO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-case slide-case-suzano case-suzano" id="slide-10">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 7 — Case 2</div>
+
+        <div class="case-layout">
+          <div class="case-left">
+            <span class="case-logo-big">🌲</span>
+            <h2 class="case-company-name">Suzano</h2>
+            <p class="case-tagline">Maior produtora de celulose do mundo. A sustentabilidade é o centro da estratégia —
+              "Inovabilidade" une inovação e preservação ambiental.</p>
+
+            <div class="case-metrics-row">
+              <div class="case-metric">
+                <span class="case-metric-val" style="color:var(--sky-400);">Mosaicos</span>
+                <span class="case-metric-lbl">Método florestal único</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-val" style="color:var(--sky-400);">Zero</span>
+                <span class="case-metric-lbl">Meta desmatamento cadeia</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-val" style="color:var(--sky-400);">SLB</span>
+                <span class="case-metric-lbl">Títulos verdes vinculados ao ESG</span>
+              </div>
+              <div class="case-metric">
+                <span class="case-metric-val" style="color:var(--sky-400);">COP30</span>
+                <span class="case-metric-lbl">Parceria com Natura (2025)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case-right">
+            <h3 class="case-actions-title">🌲 Principais Práticas ESG</h3>
+            <ul class="case-actions-list">
+              <li><strong>Método Mosaico:</strong> Planta eucalipto misturado com mata nativa, o que protege a natureza
+                e os animais locais.</li>
+              <li><strong>Inovabilidade:</strong> Cria produtos de origem vegetal (como papel) que substituem o plástico
+                feito de petróleo.</li>
+              <li><strong>Empréstimos Verdes:</strong> A empresa paga taxas menores ao banco se bater suas metas de
+                ajudar o meio ambiente.</li>
+              <li>Luta pelo desmatamento zero em toda a sua produção e em quem vende para ela.</li>
+              <li>Sua medição de poluição é aberta ao público e conferida por especialistas de fora.</li>
+              <li>Trabalha junto com a Natura para criar novas embalagens biodegradáveis que não poluem o planeta.</li>
+            </ul>
+
+            <div class="case-source">
+              <span>📖</span>
+              suzano.com.br · brazilbeautynews.com · CEBDS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 11 — CURIOSIDADES
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-curiosidades" id="slide-11">
+      <div class="slide-inner">
+        <div class="slide-label">Você Sabia?</div>
+        <h2 class="slide-title"><span class="highlight">Curiosidades</span> sobre o Carbono</h2>
+
+        <div class="curiosidades-slide-grid">
+          <div class="curiosidade-slide-card">
+            <span class="icon">🌎</span>
+            <span class="stat">15%</span>
+            <p>O Brasil tem potencial para guardar 15% de todo o carbono do mundo usando apenas a natureza — florestas e
+              solos.</p>
+          </div>
+          <div class="curiosidade-slide-card">
+            <span class="icon">💰</span>
+            <span class="stat">Dinheiro Verde</span>
+            <p>O mercado de carbono deve movimentar mais de 5 trilhões de reais em todo o mundo nesta década.</p>
+          </div>
+          <div class="curiosidade-slide-card">
+            <span class="icon">🇨🇳</span>
+            <span class="stat">China #1</span>
+            <p>A China tem hoje o maior mercado de carbono do planeta, focando em fábricas de aço e energia.</p>
+          </div>
+          <div class="curiosidade-slide-card">
+            <span class="icon">🌿</span>
+            <span class="stat">REDD+ = 45%</span>
+            <p>Projetos de conservação florestal (REDD+) são os mais comuns no Brasil, representando ~45% dos créditos
+              gerados.</p>
+          </div>
+          <div class="curiosidade-slide-card">
+            <span class="icon">⚖️</span>
+            <span class="stat">Preço da Poluição</span>
+            <p>Cada tonelada de CO₂ lançada no ar causa um prejuízo econômico (saúde, desastres) de mais de R$ 1.500.
+            </p>
+          </div>
+          <div class="curiosidade-slide-card">
+            <span class="icon">🌱</span>
+            <span class="stat">Brasil Líder</span>
+            <p>Pelas regras mundiais, o Brasil pode ser o maior fornecedor de créditos de carbono do planeta.</p>
+          </div>
+        </div>
+
+        <p
+          style="text-align:center; margin-top:var(--space-5); font-size:var(--text-xs); color:var(--slate-600); font-family:var(--font-body);">
+          📖 Fontes: IPAM · WayCarbon · CEBDS · Sylvera · PwC Brasil
+        </p>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 12 — DESAFIOS / OPINIÃO DO GRUPO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-desafios" id="slide-12">
+      <div class="slide-inner">
+        <div class="slide-label">Pergunta Norteadora 8 — Opinião do Grupo</div>
+        <h2 class="slide-title">Os Maiores <span class="highlight">Desafios</span><br>para a Sustentabilidade Real</h2>
+
+        <div class="desafios-list">
+          <div class="desafio-item">
+            <span class="desafio-num">01</span>
+            <div>
+              <h4>O Preço de Mudar</h4>
+              <p>Trocar máquinas e usar energia limpa custa caro no começo, principalmente para empresas pequenas.</p>
+            </div>
+          </div>
+          <div class="desafio-item">
+            <span class="desafio-num">02</span>
+            <div>
+              <h4>Regras Confusas</h4>
+              <p>Cada país tem sua lei, o que atrapalha empresas que vendem para o mundo todo.</p>
+            </div>
+          </div>
+          <div class="desafio-item">
+            <span class="desafio-num">03</span>
+            <div>
+              <h4>Fachada Verde (Greenwashing)</h4>
+              <p>Difícil saber quem realmente ajuda e quem só faz propaganda bonitinha sem mudar nada.</p>
+            </div>
+          </div>
+          <div class="desafio-item">
+            <span class="desafio-num">04</span>
+            <div>
+              <h4>Cadeia de Fornecedores</h4>
+              <p>É muito difícil controlar a poluição de todas as empresas que vendem peças para uma grande fábrica.</p>
+            </div>
+          </div>
+          <div class="desafio-item">
+            <span class="desafio-num">05</span>
+            <div>
+              <h4>Pressão por Lucro Rápido</h4>
+              <p>Ajudar o planeta leva tempo, mas os donos das empresas muitas vezes só querem o lucro do mês.</p>
+            </div>
+          </div>
+          <div class="desafio-item">
+            <span class="desafio-num">06</span>
+            <div>
+              <h4>Mudança de Cultura</h4>
+              <p>Não adianta só um relatório: todos na empresa precisam pensar em sustentabilidade de verdade.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grupo-opinion">
+          <span class="opinion-icon">💬</span>
+          <div>
+            <p class="opinion-text">
+              "O maior desafio não é a tecnologia, mas o pensamento das pessoas. O Brasil tem tudo para liderar —
+              florestas, sol e vento. Mas falta as empresas colocarem o planeta no centro das decisões, não apenas em um
+              papel bonito."
+            </p>
+            <p class="opinion-author">— GRUPO 5: Emissões, Carbono e Práticas ESG</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 13 — RESUMO GERAL
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-desafios" id="slide-13">
+      <div class="slide-inner">
+        <div class="slide-label">Resumindo tudo</div>
+        <h2 class="slide-title">O que Aprendemos sobre<br><span class="highlight">Carbono e ESG?</span></h2>
+
+        <div class="desafios-list" style="grid-template-columns:1fr 1fr; gap:var(--space-3);">
+          <div class="desafio-item" style="padding:var(--space-4);">
+            <span class="desafio-num" style="font-size:1.5rem;">🌡️</span>
+            <div>
+              <h4>GEE aquece o planeta</h4>
+              <p>Gases como CO₂ e metano ficam na atmosfera e retêm calor. Empresas são grandes responsáveis por essas
+                emissões.</p>
+            </div>
+          </div>
+          <div class="desafio-item" style="padding:var(--space-4);">
+            <span class="desafio-num" style="font-size:1.5rem;">📏</span>
+            <div>
+              <h4>Medir para gerenciar</h4>
+              <p>O GHG Protocol organiza emissões em 3 categorias. Só é possível reduzir o que se mede primeiro.</p>
+            </div>
+          </div>
+          <div class="desafio-item" style="padding:var(--space-4);">
+            <span class="desafio-num" style="font-size:1.5rem;">🪙</span>
+            <div>
+              <h4>Carbono tem preço</h4>
+              <p>O mercado de carbono torna a poluição cara e a preservação rentável. 1 crédito = 1 tonelada de CO₂
+                evitada.</p>
+            </div>
+          </div>
+          <div class="desafio-item" style="padding:var(--space-4);">
+            <span class="desafio-num" style="font-size:1.5rem;">⚖️</span>
+            <div>
+              <h4>Brasil tem lei desde 2024</h4>
+              <p>A Lei 15.042 criou o mercado regulado. Grandes empresas são obrigadas a declarar e reduzir emissões.
+              </p>
+            </div>
+          </div>
+          <div class="desafio-item" style="padding:var(--space-4);">
+            <span class="desafio-num" style="font-size:1.5rem;">🌿</span>
+            <div>
+              <h4>Natura e Suzano mostram o caminho</h4>
+              <p>É possível ser grande, lucrativo E sustentável. Quem agir primeiro sai na frente no mercado.</p>
+            </div>
+          </div>
+          <div class="desafio-item" style="padding:var(--space-4);">
+            <span class="desafio-num" style="font-size:1.5rem;">🚀</span>
+            <div>
+              <h4>Reduzir primeiro, compensar depois</h4>
+              <p>A ordem certa: reduzir na origem, depois compensar o restante. Só pagar sem mudar nada não resolve.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="refs-grid" style="margin-top:var(--space-5);">
+          <span class="source-tag">📖 IPCC AR6</span>
+          <span class="source-tag">GHG Protocol</span>
+          <span class="source-tag">Lei 15.042/2024</span>
+          <span class="source-tag">natura.com.br</span>
+          <span class="source-tag">suzano.com.br</span>
+          <span class="source-tag">IPAM · CEBDS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 14 — VÍDEO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-video" id="slide-14">
+      <div class="video-slide-inner">
+        <div class="video-header">
+          <div class="slide-label" style="justify-content:center; margin-bottom:var(--space-3);">🎬 Para Assistir</div>
+          <h2 class="slide-title" style="text-align:center; font-size:clamp(1.4rem,3vw,2.2rem);">
+            O que é o <span class="highlight">Mercado de Carbono</span><br>
+            <span style="font-size:0.6em; color:var(--slate-400); font-weight:400;">e como ele pode ajudar a salvar o
+              planeta?</span>
+          </h2>
+        </div>
+
+        <div class="video-container">
+          <!-- Vídeo: "O que é mercado de carbono?" — YouTube Embed -->
+          <iframe src="https://www.youtube.com/embed/DcGGTxu39aA"
+            title="O que é mercado de carbono? — Explicação simples"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+
+        <div style="text-align:center; margin-top:var(--space-5);">
+          <p
+            style="font-size:var(--text-xs); color:var(--slate-500); font-family:var(--font-body); margin-bottom:var(--space-3);">
+            O vídeo não carregou? Clique abaixo para assistir diretamente no YouTube:
+          </p>
+          <a href="https://www.youtube.com/watch?v=DcGGTxu39aA" target="_blank" rel="noopener noreferrer"
+            id="btn-youtube-fallback" style="
+              display:inline-flex;
+              align-items:center;
+              gap:10px;
+              padding:10px 24px;
+              background:rgba(255,0,0,0.15);
+              border:1px solid rgba(255,80,80,0.4);
+              border-radius:999px;
+              color:#FC8181;
+              font-family:var(--font-display);
+              font-size:var(--text-sm);
+              font-weight:700;
+              text-decoration:none;
+              transition:all 0.2s ease;
+            " onmouseover="this.style.background='rgba(255,0,0,0.3)'; this.style.borderColor='rgba(255,80,80,0.7)';"
+            onmouseout="this.style.background='rgba(255,0,0,0.15)'; this.style.borderColor='rgba(255,80,80,0.4)';">
+            ▶ Assistir no YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         SLIDE 15 — ENCERRAMENTO
+         ════════════════════════════════════════════════════ -->
+    <div class="slide slide-end" id="slide-15">
+      <span class="end-logo">🌍</span>
+      <h2 class="end-title">Obrigado!</h2>
+      <p class="end-sub">GRUPO 5 — Emissões, Carbono e Práticas ESG</p>
+
+      <div class="end-team">
+        <span class="end-member">👤 Carlos D.</span>
+        <span class="end-member">👤 Italo</span>
+      </div>
+
+      <div style="display:flex; flex-direction:column; align-items:center; gap:var(--space-4);">
+        <a href="index.html" class="btn btn-outline" id="btn-estudos-end" style="font-size:var(--text-base);">
+          📚 Ver Material Completo
+        </a>
+        <p style="font-size:var(--text-xs); color:var(--slate-600); font-family:var(--font-body);">
+          Use as setas ← → ou clique nos pontos para navegar entre os slides
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Controls ──────────────────────────────────────── -->
+    <div class="slide-controls" id="slide-controls">
+      <button class="slide-btn" id="slide-prev" aria-label="Slide anterior (←)" disabled>←</button>
+
+      <div class="slide-dots" id="slide-dots"></div>
+
+      <div class="slide-counter" id="slide-counter">
+        <span class="current">1</span> / 15
+      </div>
+
+      <button class="slide-btn" id="slide-next" aria-label="Próximo slide (→)">→</button>
+    </div>
+
+  </div><!-- /slides-app -->
+
+  <!-- JS -->
+  <script src="js/slides.js"></script>
+</body>
+
+</html>
