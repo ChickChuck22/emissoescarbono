@@ -57,7 +57,7 @@ A página de slides foi projetada para uma experiência de apresentação premiu
 ## 👥 Grupo 5
 
 -   **Tema**: Emissões, Carbono e Práticas ESG.
--   **Membro**: Carlos D.
+-   **Membro**: Carlos D. & Italo
 
 ---
 
